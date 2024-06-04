@@ -14,18 +14,62 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: rgb(62, 82, 68);
+  margin-top: -2%;
+  display: flex;
+  flex-direction: column; /* Arrange items in a column */
+  align-items: center; /* Center items horizontally */
+  width: 100%; /* Ensures header takes full width */
+  text-align: center; /* Centers text within the header */
 }
 
+.header-title {
+  display: flex;
+  align-items: center; /* Vertically aligns items within the flex container */
+}
+
+.header-title img {
+  margin-right: 10px; /* Adjust the spacing between the image and the text as needed */
+}
+.header-div{
+  margin-top: -3%
+}
+
+.header-div p{  
+  margin-top: -7%;
+}
 .App-link {
   color: #61dafb;
+}
+
+.main-nav{
+  display: flex;
+  justify-content: space-around;
+  font-size: larger;
+}
+
+a:link, a:visited{
+  text-decoration: none;
+  color: black;
+}
+
+.main{
+  margin-top: -1%;
+}
+
+.footer{
+  display: flex;
+  justify-content: space-around;
+  font-size: larger;
+}
+
+footer{
+  background-color: #5e8a575e;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 @keyframes App-logo-spin {
