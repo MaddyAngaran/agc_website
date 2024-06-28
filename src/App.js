@@ -1,10 +1,15 @@
 import logo from './agc.png';
-import nonno from './nonno.jpeg';
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import About from './components/About.js';
+import Contact from './components/Contact.js';
+import Home from './components/Home.js'
 
 function App() {
   return (
-    <div className="App"> 
+   <BrowserRouter>
+   <div className="App"> 
       <header className="App-header">
         <h1 className="header-title">
           <img src={logo} alt="logo"/>
@@ -12,29 +17,27 @@ function App() {
         </h1>
         <div class="header-div">
           <p>Celebrating 50 Years of Business!</p>
-          <strong><u><p>OPEN SUNDAYS!</p></u></strong>
+          <strong><u><p>We are now closed on Sundays</p></u></strong>
         </div>
     </header>
     <main class="main">
       <hr></hr>
+
+    
       <nav class="main-nav">
-          <a href="./App.js">Home</a>
-          <a href="./About.js">About</a>
-          <a href="./Contact.js">Contact</a>
+          <a href="/">Home</a>
+          <a href="/About">About</a>
+          <a href="/Contact">Contact</a>
       </nav>
       <hr></hr>
-      <img src={nonno}/>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/About" element={<About />} />
+        <Route path="/Contact" element={<Contact />} />
+      </Routes>
+      
+      
+      
       </main>
    
       <footer>
@@ -46,6 +49,7 @@ function App() {
         <p>© 2024 Angelo's Garden Center. All rights reserved.</p>
       </footer> 
     </div>
+    </BrowserRouter> 
 
   );
 }
